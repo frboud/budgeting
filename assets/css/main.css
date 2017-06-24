@@ -78,7 +78,8 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label {
   border-bottom: 1px solid #eee; }
   .calendar-header h1 {
     padding: 17px 0;
-    width: 100%; }
+    width: 100%;
+    font-weight: 400; }
   .calendar-header p {
     width: 14.285714285%;
     padding: 10px 0;
@@ -91,6 +92,10 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label {
     text-align: center;
     width: 14.285714285%;
     padding: 20px 0;
-    font-size: 13px; }
+    font-size: 13px;
+    font-weight: 500; }
+    .calendar-body .calendar-date.other-month {
+      color: #a3aeb6;
+      font-weight: 400; }
 
 /*# sourceMappingURL=main.css.map */

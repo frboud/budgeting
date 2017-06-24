@@ -133,6 +133,7 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label{
   h1{
     padding: 17px 0;
     width:100%;
+    font-weight: 400;
   }
   p{
     width: 14.285714285%;
@@ -149,5 +150,10 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label{
     width: 14.285714285%;
     padding:20px 0;
     font-size:13px;
+    font-weight: 500;
+    &.other-month{
+      color:$tLight;
+      font-weight: 400;
+    }
   }
 }

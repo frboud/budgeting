@@ -52,17 +52,29 @@ var BudgetApp = (function() {
           var that = _self.Calendar;
           // Draw the month selector and day names
           var body = document.getElementById('calendar-body');
-          var html = '';
+          var html = '',
+            dayCounter = 0;
 
           // Add the days from the previous month
           var monthStart = new Date(that.year, that.month, 1).getDay(),
-            prevMonth = that.month;
-          for (var i = 0; i < monthStart; i++) {
-            html += "<p class=\"calendar-date\"></p>";
+            prevMonth = that.month -1;
+
+          if (prevMonth === -1)
+            prevMonth = 12;
+
+          // Start at monthStart + 1 since calendars dont start at 0
+          for (var i = (that.monthLength[prevMonth] - monthStart + 1); i <= that.monthLength[prevMonth]; i++, dayCounter++) {
+            html += "<p class=\"calendar-date other-month\">"+i+"</p>";
           }
 
-          for (var i = 1; i < 31; i++) {
+          // Add current month days
+          for (var i = 1; i < that.monthLength[that.month] + 1; i++, dayCounter++) {
             html += "<p class=\"calendar-date\">"+i+"</p>";
+          }
+
+          // Add days after month end
+          for (var i = 1; dayCounter % 7 !== 0; i++, dayCounter++) {
+            html += "<p class=\"calendar-date other-month\">"+i+"</p>";
           }
 
           body.innerHTML += html;
