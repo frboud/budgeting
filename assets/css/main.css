@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body, #main {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+body {
+  background: #f2f2f2; }
+
+p, h1, h2, h3, h4, h5, h6, span, li, button, label {
+  font-family: "Roboto", "Helvetica", "sans-serif";
+  color: #646e76; }
+
+#main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 5px; }
+
+.main-section {
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin: 5px; }
+  .main-section.timeline {
+    width: 40%; }
+  .main-section.balance {
+    width: 58%; }
+  .main-section.breakdown {
+    width: 56%; }
+  .main-section.bills {
+    width: 42%; }
+
+.entry-list {
+  list-style: none;
+  padding: 5px 0; }
+
+.section-header {
+  font-weight: 300;
+  padding: 30px 50px;
+  border-bottom: 2px solid #f2f2f2;
+  color: #8e8e8e; }
+
+.timeline-entry {
+  padding: 12px 35px 12px 45px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.timeline-entry:not(:last-of-type) {
+  border-bottom: 1px solid #eee; }
+
+.entry-date {
+  font-size: 11px;
+  color: #a3aeb6; }
+
+.entry-name {
+  font-size: 13px; }
+
+.entry-amount span {
+  color: #a3aeb6;
+  font-size: 11px;
+  padding-left: 7px; }
+
+.expense .entry-amount {
+  color: #e53935; }
+
+.income .entry-amount {
+  color: #4bca81; }
+
+.calendar-header {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border-bottom: 1px solid #eee; }
+  .calendar-header h1 {
+    padding: 17px 0;
+    width: 100%; }
+  .calendar-header p {
+    width: 14.285714285%;
+    padding: 10px 0;
+    color: #a3aeb6; }
+
+.calendar-body {
+  display: flex;
+  flex-wrap: wrap; }
+  .calendar-body .calendar-date {
+    text-align: center;
+    width: 14.285714285%;
+    padding: 20px 0;
+    font-size: 13px; }
+
+/*# sourceMappingURL=main.css.map */
