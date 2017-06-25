@@ -87,7 +87,8 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label {
 
 .calendar-body {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 20px; }
   .calendar-body .calendar-date {
     text-align: center;
     width: 14.285714285%;
@@ -97,5 +98,60 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label {
     .calendar-body .calendar-date.other-month {
       color: #a3aeb6;
       font-weight: 400; }
+  .calendar-body .pending-bill {
+    position: relative; }
+    .calendar-body .pending-bill span {
+      border-radius: 50%;
+      border: 4px solid #2196f3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 45px; }
+  .calendar-body .overdue-bill {
+    position: relative; }
+    .calendar-body .overdue-bill span {
+      border-radius: 50%;
+      border: 4px solid #f44336;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 45px; }
+  .calendar-body .paid-bill {
+    position: relative; }
+    .calendar-body .paid-bill:hover i {
+      border: 25px solid #4caf50; }
+    .calendar-body .paid-bill:hover span {
+      color: #fff; }
+    .calendar-body .paid-bill > span {
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 45px;
+      overflow: hidden;
+      cursor: pointer; }
+      .calendar-body .paid-bill > span span {
+        line-height: 45px; }
+    .calendar-body .paid-bill i {
+      border-radius: 500px;
+      border: 4px solid #4caf50;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 45px;
+      transition: border 0.15s;
+      z-index: -1; }
 
 /*# sourceMappingURL=main.css.map */

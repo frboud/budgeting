@@ -145,6 +145,7 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label{
 .calendar-body{
   display: flex;
   flex-wrap: wrap;
+  padding-bottom:20px;
   .calendar-date{
     text-align: center;
     width: 14.285714285%;
@@ -154,6 +155,58 @@ p, h1, h2, h3, h4, h5, h6, span, li, button, label{
     &.other-month{
       color:$tLight;
       font-weight: 400;
+    }
+  }
+  .pending-bill{
+    position:relative;
+    span{
+      border-radius:50%;
+      border:4px solid #2196f3;
+      @include centerer();
+      height:45px;
+      width:45px;
+
+    }
+  }
+
+  .overdue-bill{
+    position:relative;
+    span{
+      border-radius:50%;
+      border:4px solid #f44336;
+      @include centerer();
+      height:45px;
+      width:45px;
+
+    }
+  }
+
+  .paid-bill{
+    position:relative;
+
+    &:hover{
+      i{ border:25px solid #4caf50; }
+      span{color:#fff};
+    }
+    & > span{
+      border-radius: 50%;
+      @include centerer();
+      height: 45px;
+      width: 45px;
+      overflow: hidden;
+      cursor:pointer;
+      span{
+        line-height:45px;
+      }
+    }
+    i{
+      border-radius: 500px;
+      border:4px solid #4caf50;
+      @include centerer();
+      height: 45px;
+      width: 45px;
+      transition: border 0.15s;
+      z-index:-1;
     }
   }
 }

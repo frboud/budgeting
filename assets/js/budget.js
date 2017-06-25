@@ -14,7 +14,6 @@ var BudgetApp = (function() {
     },
 
     Calendar: {
-      // dayNames: ['Sat', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sun'],
       dayNames: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
       monthLength: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -69,7 +68,14 @@ var BudgetApp = (function() {
 
           // Add current month days
           for (var i = 1; i < that.monthLength[that.month] + 1; i++, dayCounter++) {
-            html += "<p class=\"calendar-date\">"+i+"</p>";
+            if (i == 27)
+              html += "<p class=\"calendar-date pending-bill\">"+i+"<span></span></p>";
+            else if (i == 15)
+              html += "<p class=\"calendar-date paid-bill\"><span><span>"+i+"</span><i></i></span></p>";
+            else if (i == 9)
+              html += "<p class=\"calendar-date overdue-bill\">"+i+"<span></span></p>";
+            else
+              html += "<p class=\"calendar-date\">"+i+"</p>";
           }
 
           // Add days after month end
